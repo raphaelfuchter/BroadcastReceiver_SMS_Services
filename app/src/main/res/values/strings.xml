@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CompMovelTrabFinal</string>
+
+    <string name="btn_broadcastreceiver">BroadcastReceiver</string>
+    <string name="btn_sms">SMS</string>
+    <string name="btn_service">Service</string>
+</resources>
