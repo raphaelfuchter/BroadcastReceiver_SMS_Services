@@ -30,7 +30,7 @@ public class SMSActivity extends AppCompatActivity {
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage(phoneNo, null, message, null, null);
+            smsManager.sendTextMessage(phoneNo, null, message, null, null);//TODO CORRIGIR PERMISSÃO NOVA VERSAO ANDROID
             Toast.makeText(getApplicationContext(), "SMS enviado.", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "Erro no envio do SMS.", Toast.LENGTH_LONG).show();

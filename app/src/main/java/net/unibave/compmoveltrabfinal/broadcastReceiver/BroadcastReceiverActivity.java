@@ -1,7 +1,9 @@
-package net.unibave.compmoveltrabfinal;
+package net.unibave.compmoveltrabfinal.broadcastReceiver;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import net.unibave.compmoveltrabfinal.R;
 
 /**
  * http://www.tutorialspoint.com/android/android_broadcast_receivers.htm
