@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import net.unibave.compmoveltrabfinal.service.ServiceActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view View
      */
     public void btnOkOnClickService(View view) {
-        Intent intent = new Intent(this, ServicesActivity.class);
+        Intent intent = new Intent(this, ServiceActivity.class);
         startActivity(intent);
     }
 

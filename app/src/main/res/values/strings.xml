@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">CompMovelTrabFinal</string>
 
-    <string name="btn_broadcastreceiver">BroadcastReceiver</string>
-    <string name="btn_sms">SMS</string>
-    <string name="btn_service">Service</string>
+    <string name="broadcastreceiver">BroadcastReceiver</string>
+
+    <string name="sms">SMS</string>
+
+    <string name="service">Service</string>
+    <string name="service_desc">
+        - Service é um componente do android utilizado para executar longas tarefas em segundo plano. \n\n
+        - Um Service pode ser executado em segundo plano por tempo indeterminado, mesmo que o componente que iniciou esse serviço tenha sido encerrado/destruído.\n\n
+        - Normalmente, um Service sempre executa um única operação e apenas para quando a tarefa pretendida for completada.
+    </string>
+    <string name="start_service">Iniciar Service</string>
+    <string name="stop_service">Parar Service</string>
+
 </resources>
