@@ -7,6 +7,9 @@ import android.view.View;
 
 import net.unibave.compmoveltrabfinal.R;
 
+/**
+ * http://stacktips.com/tutorials/android/android-service-example
+ */
 public class ServiceActivity extends AppCompatActivity {
 
     @Override

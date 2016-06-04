@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import net.unibave.compmoveltrabfinal.service.ServiceActivity;
+import net.unibave.compmoveltrabfinal.sms.SMSActivity;
 
 public class MainActivity extends AppCompatActivity {
 

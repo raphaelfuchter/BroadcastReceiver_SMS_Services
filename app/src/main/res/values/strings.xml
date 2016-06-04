@@ -4,6 +4,9 @@
     <string name="broadcastreceiver">BroadcastReceiver</string>
 
     <string name="sms">SMS</string>
+    <string name="numero">Número</string>
+    <string name="msg">Mensagem</string>
+    <string name="send_sms">Enviar SMS</string>
 
     <string name="service">Service</string>
     <string name="service_desc">
