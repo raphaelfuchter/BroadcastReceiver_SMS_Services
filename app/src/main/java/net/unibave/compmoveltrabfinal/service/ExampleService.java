@@ -3,7 +3,7 @@ package net.unibave.compmoveltrabfinal.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.util.Log;
+import android.widget.Toast;
 
 public class ExampleService extends Service {
 
@@ -13,23 +13,19 @@ public class ExampleService extends Service {
 
     @Override
     public void onCreate() {
-        Log.i(TAG, "Service onCreate");
+        Toast.makeText(ServiceActivity.context, "Service onCreate", Toast.LENGTH_LONG).show();
         isRunning = true;
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        Log.i(TAG, "Service onStartCommand");
+        Toast.makeText(ServiceActivity.context, "Service onStartCommand", Toast.LENGTH_LONG).show();
 
-        //Creating new thread for my service
-        //Always write your long running tasks in a separate thread, to avoid ANR
         new Thread(new Runnable() {
             @Override
             public void run() {
 
-                //Your logic that service will perform will be placed here
-                //In this example we are just looping and waits for 1000 milliseconds in each loop.
                 for (int i = 0; i < 5; i++) {
                     try {
                         Thread.sleep(1000);
@@ -38,12 +34,11 @@ public class ExampleService extends Service {
                     }
 
                     if(isRunning){
-                        Log.i(TAG, "Service running");
+                        Toast.makeText(ServiceActivity.context, "Service está executando", Toast.LENGTH_LONG).show();
                     }
                 }
 
-                //Stop service once it finishes its task
-                stopSelf();
+                stopSelf();//Parar service após terminar a sua tarefa/função
             }
         }).start();
 
@@ -53,13 +48,13 @@ public class ExampleService extends Service {
 
     @Override
     public IBinder onBind(Intent arg0) {
-        Log.i(TAG, "Service onBind");
+        Toast.makeText(ServiceActivity.context, "Service onBind", Toast.LENGTH_LONG).show();
         return null;
     }
 
     @Override
     public void onDestroy() {
         isRunning = false;
-        Log.i(TAG, "Service onDestroy");
+        Toast.makeText(ServiceActivity.context, "Service foi parado/destruido", Toast.LENGTH_LONG).show();
     }
 }

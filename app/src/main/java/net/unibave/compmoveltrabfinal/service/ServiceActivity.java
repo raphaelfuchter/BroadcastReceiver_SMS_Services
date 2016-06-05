@@ -1,5 +1,6 @@
 package net.unibave.compmoveltrabfinal.service;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,14 +13,18 @@ import net.unibave.compmoveltrabfinal.R;
  */
 public class ServiceActivity extends AppCompatActivity {
 
+    public static Context context;//TODO Encontrar uma forma melhor de mandar o context para o service
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
+
+        context = this;
     }
 
     /**
-     * Starting service on click
+     * Evento para iniciar o Service
      * @param view View
      */
     public void btnStartServiceOnClick(View view) {
@@ -28,7 +33,7 @@ public class ServiceActivity extends AppCompatActivity {
     }
 
     /**
-     * Service onDestroy callback method will be called
+     * Evento para parar/destruir o Service
      * @param view View
      */
     public void btnStopServiceOnClick(View view) {
