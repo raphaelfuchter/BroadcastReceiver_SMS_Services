@@ -2,6 +2,12 @@
     <string name="app_name">CompMovelTrabFinal</string>
 
     <string name="broadcastreceiver">BroadcastReceiver</string>
+    <string name="broadcastreceiver_desc">
+        - BroadcastReceiver é um componente do android utilizado para que aplicações possam reagir a determinados eventos gerados por uma intent. \n\n
+        - Um BroadcastReceiver sempre é executado em segundo plano durante pouco tempo e sem utilizar uma interface gráfica. \n\n
+        - Seu objetivo é receber uma mensagem (intent) e processá-la sem que o usuário perceba. \n\n
+        - Neste app está implementado a função 'RECEIVE_BOOT_COMPLETED', que após o iniciar o SO este aplicativo iniciará automaticamente.
+    </string>
 
     <string name="sms">SMS</string>
     <string name="numero">Número</string>

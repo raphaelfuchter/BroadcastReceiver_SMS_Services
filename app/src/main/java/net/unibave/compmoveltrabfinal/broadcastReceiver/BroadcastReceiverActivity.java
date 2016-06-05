@@ -7,6 +7,7 @@ import net.unibave.compmoveltrabfinal.R;
 
 /**
  * http://www.tutorialspoint.com/android/android_broadcast_receivers.htm
+ * http://stacktips.com/tutorials/android/how-to-start-an-application-at-device-bootup-in-android
  */
 public class BroadcastReceiverActivity extends AppCompatActivity {
 
@@ -15,4 +16,7 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_broadcast_receiver);
     }
+
+
+
 }

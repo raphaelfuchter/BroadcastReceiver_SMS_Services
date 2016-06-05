@@ -48,8 +48,7 @@ public class SMSActivity extends AppCompatActivity {
         try {
             switch (permsRequestCode) {
                 case 200:
-                    boolean writeAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-                    if (writeAccepted) {
+                    if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                         sendSMS();
                     } else {
                         Toast.makeText(this, "Sem permissão do dispositivo para envio de SMS!", Toast.LENGTH_LONG).show();
@@ -77,10 +76,6 @@ public class SMSActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Erro no envio do SMS.", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
-    }
-
-    private void receiveSMS(){
-        //TODO
     }
 
 }

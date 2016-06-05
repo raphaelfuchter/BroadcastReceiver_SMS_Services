@@ -3,7 +3,7 @@ package net.unibave.compmoveltrabfinal.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.widget.Toast;
+import android.util.Log;
 
 public class ExampleService extends Service {
 
@@ -13,14 +13,14 @@ public class ExampleService extends Service {
 
     @Override
     public void onCreate() {
-        Toast.makeText(ServiceActivity.context, "Service onCreate", Toast.LENGTH_LONG).show();
+        Log.v(TAG, "Service onCreate");
         isRunning = true;
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        Toast.makeText(ServiceActivity.context, "Service onStartCommand", Toast.LENGTH_LONG).show();
+        Log.v(TAG, "Service onStartCommand");
 
         new Thread(new Runnable() {
             @Override
@@ -34,7 +34,7 @@ public class ExampleService extends Service {
                     }
 
                     if(isRunning){
-                        Toast.makeText(ServiceActivity.context, "Service está executando", Toast.LENGTH_LONG).show();
+                        Log.v(TAG, "Service está executando");
                     }
                 }
 
@@ -48,13 +48,13 @@ public class ExampleService extends Service {
 
     @Override
     public IBinder onBind(Intent arg0) {
-        Toast.makeText(ServiceActivity.context, "Service onBind", Toast.LENGTH_LONG).show();
+        Log.v(TAG, "Service onBind");
         return null;
     }
 
     @Override
     public void onDestroy() {
         isRunning = false;
-        Toast.makeText(ServiceActivity.context, "Service foi parado/destruido", Toast.LENGTH_LONG).show();
+        Log.v(TAG, "Service foi parado/destruido");
     }
 }
