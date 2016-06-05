@@ -15,6 +15,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -22,9 +23,10 @@
         <activity android:name=".sms.SMSActivity" />
         <activity android:name=".service.ServiceActivity" />
 
-        <!--Service declared in manifest -->
-        <service android:name=".service.ExampleService"
-            android:exported="false"/>
+        <!-- Service declared in manifest -->
+        <service
+            android:name=".service.ExampleService"
+            android:exported="false" />
 
         <receiver
             android:name=".sms.SMSReceiver"
@@ -34,17 +36,18 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-
         <receiver
             android:name=".broadcastReceiver.BootReceiver"
             android:enabled="true"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".sms.SendSMSActivity"></activity>
     </application>
 
 </manifest>
