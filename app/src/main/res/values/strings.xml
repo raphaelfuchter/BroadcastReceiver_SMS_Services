@@ -6,7 +6,6 @@
         Wesley Fuchter
     </string>
 
-
     <string name="broadcastreceiver">BroadcastReceiver</string>
     <string name="broadcastreceiver_desc">
         - BroadcastReceiver é um componente do android utilizado para que aplicações possam reagir a determinados eventos gerados por uma intent. \n\n
@@ -24,6 +23,7 @@
     <string name="numero">Número</string>
     <string name="msg">Mensagem</string>
     <string name="send_sms">Enviar SMS</string>
+    <string name="send_sms_intent">Enviar SMS Intent</string>
     <string name="receive_sms">Receber SMS</string>
 
 

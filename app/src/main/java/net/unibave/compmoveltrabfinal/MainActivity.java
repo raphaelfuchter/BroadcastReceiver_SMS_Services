@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import net.unibave.compmoveltrabfinal.broadcastReceiver.BroadcastReceiverActivity;
+import net.unibave.compmoveltrabfinal.broadcastreceiver.BroadcastReceiverActivity;
 import net.unibave.compmoveltrabfinal.service.ServiceActivity;
 import net.unibave.compmoveltrabfinal.sms.SMSActivity;
 

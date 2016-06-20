@@ -1,4 +1,4 @@
-package net.unibave.compmoveltrabfinal.broadcastReceiver;
+package net.unibave.compmoveltrabfinal.broadcastreceiver;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

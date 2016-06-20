@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".broadcastReceiver.BroadcastReceiverActivity" />
+        <activity android:name=".broadcastreceiver.BroadcastReceiverActivity" />
         <activity android:name=".sms.SMSActivity" />
         <activity android:name=".service.ServiceActivity" />
 
@@ -37,7 +37,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".broadcastReceiver.BootReceiver"
+            android:name=".broadcastreceiver.BootReceiver"
             android:enabled="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>

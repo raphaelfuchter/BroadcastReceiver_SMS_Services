@@ -1,4 +1,4 @@
-package net.unibave.compmoveltrabfinal.broadcastReceiver;
+package net.unibave.compmoveltrabfinal.broadcastreceiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
