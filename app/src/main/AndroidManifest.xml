@@ -24,6 +24,7 @@
         <activity android:name=".sms.SMSActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".sms.SendSMSActivity" />
+        <activity android:name=".sms.ReceiveSMSActivity"></activity>
 
         <!-- Broadcast Receiver -->
         <receiver
@@ -48,7 +49,6 @@
         <!-- Service -->
         <service android:name=".service.ExampleService" />
 
-        <activity android:name=".sms.ReceiveSMSActivity"></activity>
     </application>
 
 </manifest>
