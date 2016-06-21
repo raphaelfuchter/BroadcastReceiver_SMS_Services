@@ -44,6 +44,6 @@
         android:layout_height="wrap_content"
         android:text="@string/send_sms_intent"
         android:id="@+id/btn_broadcastreceiver_intent"
-        android:onClick="btnSendSmsOnClick" />
+        android:onClick="btnSendSmsIntentOnClick" />
 
 </LinearLayout>

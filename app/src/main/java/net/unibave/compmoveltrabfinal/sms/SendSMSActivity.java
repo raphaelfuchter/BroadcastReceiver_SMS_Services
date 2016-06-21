@@ -1,8 +1,7 @@
 package net.unibave.compmoveltrabfinal.sms;
 
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.annotation.NonNull;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -26,52 +25,36 @@ public class SendSMSActivity extends AppCompatActivity {
         editTextMessage = (EditText) findViewById(R.id.editTextMessage);
     }
 
+    /**
+     * Evento do botão para enviar SMS
+     * @param view view
+     */
     public void btnSendSmsOnClick(View view) {
-        try {
-            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
-                String[] perms = {"android.permission.SEND_SMS"};
-                requestPermissions(perms, 200);
-            }else{
-                sendSMS();
-            }
-        } catch (Exception e) {
-            Toast.makeText(this, "Erro: "+e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int permsRequestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        try {
-            switch (permsRequestCode) {
-                case 200:
-                    if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                        sendSMS();
-                    } else {
-                        Toast.makeText(this, "Sem permissão do dispositivo para envio de SMS!", Toast.LENGTH_LONG).show();
-                    }
-                    break;
-                default:
-                    Toast.makeText(this, "Sem permissão do dispositivo para envio de SMS!", Toast.LENGTH_LONG).show();
-                    break;
-            }
-        } catch (Exception e) {
-            Toast.makeText(this, "Erro: "+e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-
-    }
-
-    private void sendSMS(){
         String phoneNo = editTextTelefone.getText().toString();
         String message = editTextMessage.getText().toString();
 
         try {
-            SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage(phoneNo, null, message, null, null);
+            SmsManager smsManager = SmsManager.getDefault();// Cria instancia de SMSManager
+            smsManager.sendTextMessage(phoneNo, null, message, null, null);// Envia a mensagem
             Toast.makeText(getApplicationContext(), "SMS enviado.", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "Erro no envio do SMS.", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }
+
+    /**
+     * Evento do botão para enviar SMS pelo Intent
+     * @param view view
+     */
+    public void btnSendSmsIntentOnClick(View view) {
+        String phoneNo = editTextTelefone.getText().toString();
+        String message = editTextMessage.getText().toString();
+
+        Uri uri = Uri.fromParts("sms", phoneNo, null);// Cria Uri com o número de telefone
+        Intent it = new Intent(Intent.ACTION_SENDTO, uri);// Cria intent com a URI e o evento para envio de SMS
+        it.putExtra("sms_body", message);// Define a mensagem do SMS
+        startActivity(it);// Inicia o intent
+}
 
 }

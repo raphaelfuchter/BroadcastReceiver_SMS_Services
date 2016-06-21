@@ -8,6 +8,7 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -22,32 +23,32 @@
         <activity android:name=".broadcastreceiver.BroadcastReceiverActivity" />
         <activity android:name=".sms.SMSActivity" />
         <activity android:name=".service.ServiceActivity" />
+        <activity android:name=".sms.SendSMSActivity" />
 
-        <!-- Service declared in manifest -->
-        <service
-            android:name=".service.ExampleService"
-            android:exported="false" />
-
-        <receiver
-            android:name=".sms.SMSReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter android:priority="999">
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-            </intent-filter>
-        </receiver>
+        <!-- Broadcast Receiver -->
         <receiver
             android:name=".broadcastreceiver.BootReceiver"
             android:enabled="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".sms.SendSMSActivity"></activity>
+        <!-- Broadcast Receiver Receive SMS -->
+        <receiver
+            android:name=".sms.SMSReceiver"
+            android:enabled="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Service -->
+        <service android:name=".service.ExampleService" />
+
+        <activity android:name=".sms.ReceiveSMSActivity"></activity>
     </application>
 
 </manifest>

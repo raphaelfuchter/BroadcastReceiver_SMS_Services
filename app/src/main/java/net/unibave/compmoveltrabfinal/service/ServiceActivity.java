@@ -1,6 +1,5 @@
 package net.unibave.compmoveltrabfinal.service;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,14 +12,10 @@ import net.unibave.compmoveltrabfinal.R;
  */
 public class ServiceActivity extends AppCompatActivity {
 
-    public static Context context;//TODO Encontrar uma forma melhor de mandar o context para o service
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
-
-        context = this;
     }
 
     /**

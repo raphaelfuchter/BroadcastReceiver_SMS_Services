@@ -8,6 +8,11 @@ import net.unibave.compmoveltrabfinal.MainActivity;
 
 public class BootReceiver extends BroadcastReceiver {
 
+    /**
+     * Evento para quando o SO for reiniciado (ele abre o próprio app)
+     * @param context context
+     * @param intent intent
+     */
     @Override
     public void onReceive(Context context, Intent intent) {
         Intent i = new Intent(context, MainActivity.class);

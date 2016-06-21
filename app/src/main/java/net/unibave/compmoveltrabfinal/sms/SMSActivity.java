@@ -19,14 +19,13 @@ public class SMSActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sms);
     }
 
+    /**
+     * Evento para abrir a tela de envio de SMS
+     * @param view view
+     */
     public void btnSendSmsOnClick(View view) {
         Intent intent = new Intent(this, SendSMSActivity.class);
         startActivity(intent);
-    }
-
-    public void btnReceiveSmsOnClick(View view) {
-        //Intent intent = new Intent(this, SendSMSActivity.class);
-        //startActivity(intent);
     }
 
 }

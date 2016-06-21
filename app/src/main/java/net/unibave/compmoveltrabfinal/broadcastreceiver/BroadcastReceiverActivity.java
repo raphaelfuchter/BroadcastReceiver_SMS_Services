@@ -2,6 +2,9 @@ package net.unibave.compmoveltrabfinal.broadcastreceiver;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import net.unibave.compmoveltrabfinal.R;
 
@@ -17,6 +20,14 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
         setContentView(R.layout.activity_broadcast_receiver);
     }
 
-
+    /**
+     * Evento do botão Outras Opções Disponíveis
+     * @param view view
+     */
+    public void btnOutrasOpcoesDisponiveis(View view) {
+        new MaterialDialog.Builder(this)
+                .items(R.array.array_broadcastreceiver)
+                .show();
+    }
 
 }

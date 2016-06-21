@@ -19,13 +19,10 @@ public class ExampleService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
         Log.v(TAG, "Service onStartCommand");
-
         new Thread(new Runnable() {
             @Override
             public void run() {
-
                 for (int i = 0; i < 5; i++) {
                     try {
                         Thread.sleep(1000);
